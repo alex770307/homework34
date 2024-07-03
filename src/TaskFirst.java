@@ -45,9 +45,9 @@ public class TaskFirst {
                         car.getName().startsWith("W"))
                         && car.getMileage() <= 200_000)
                 .max(Comparator.comparing(Car::getMileage));
-        String nameOfcCarWithTheHighestMileage = String.valueOf(carWithTheHighestMileage.orElse(null));
+        String nameOfCarWithTheHighestMileage = String.valueOf(carWithTheHighestMileage.orElse(null));
         System.out.println("Машина с маркой на 'V' или 'W' " +
                 "и пробегом не более 200 000 км с наибольшим пробегом: "
-                + nameOfcCarWithTheHighestMileage);
+                + nameOfCarWithTheHighestMileage);
     }
 }
