@@ -19,7 +19,7 @@ public class TaskFirst {
         cars.add(fiat);
         cars.add(ferrari);
         cars.add(opel);
-
+        System.out.println("Список машин : " + cars);
 
         int totalMileage = cars.stream()
                 .filter(car -> car.getManufactureYear() > 1999)
