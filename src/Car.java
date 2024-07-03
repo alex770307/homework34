@@ -6,6 +6,9 @@ public class Car {
     private  int manufactureYear;
     private int mileage;
 
+    public Car() {
+    }
+
     public Car(String name, int manufactureYear, int mileage) {
         this.name = name;
         this.manufactureYear = manufactureYear;

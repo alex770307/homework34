@@ -10,6 +10,7 @@ public class TaskFirst {
         Car fiat = new Car("Fiat", 2006, 250_000);
         Car ferrari = new Car("Ferrari", 1956, 67_000);
         Car opel = new Car("Opel", 2020, 89_000);
+        Car ford = new Car();
         List<Car> cars = new ArrayList<>();
         cars.add(wolga);
         cars.add(vw);
@@ -19,21 +20,25 @@ public class TaskFirst {
         cars.add(fiat);
         cars.add(ferrari);
         cars.add(opel);
+        cars.add(ford);
         System.out.println("Список машин : " + cars);
 
         int totalMileage = cars.stream()
+                .filter(car -> (car.getName() != null) && car.getMileage() != 0 && car.getManufactureYear()!=0)
                 .filter(car -> car.getManufactureYear() > 1999)
                 .mapToInt(Car::getMileage)
                 .sum();
         System.out.println("Общий пробег автомобилей новее 1999 года: " + totalMileage + " км");
 
         Optional<Car> oldCar = cars.stream()
+                .filter(car -> (car.getName() != null) && car.getMileage() != 0 && car.getManufactureYear()!=0)
                 .filter(car -> car.getMileage() > 500_000)
                 .min(Comparator.comparing(Car::getManufactureYear));
         String nameOfOldCar = String.valueOf(oldCar.get());
         System.out.println("Самая старая машина с пробегом более 500 000 км: " + nameOfOldCar);
 
         Optional<Car> carWithTheHighestMileage = cars.stream()
+                .filter(car -> (car.getName() != null) && car.getMileage() != 0 && car.getManufactureYear()!=0)
                 .filter(car -> (car.getName().startsWith("V") ||
                         car.getName().startsWith("W"))
                         && car.getMileage() <= 200_000)
