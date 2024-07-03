@@ -10,6 +10,7 @@ public class TaskFirst {
         Car fiat = new Car("Fiat", 2006, 250_000);
         Car ferrari = new Car("Ferrari", 1956, 67_000);
         Car opel = new Car("Opel", 2020, 89_000);
+        Car honda = new Car("Honda", 2100, 160_000);
         Car ford = new Car();
         List<Car> cars = new ArrayList<>();
         cars.add(wolga);
@@ -20,6 +21,7 @@ public class TaskFirst {
         cars.add(fiat);
         cars.add(ferrari);
         cars.add(opel);
+        cars.add(honda);
         cars.add(ford);
         System.out.println("Список машин : " + cars);
 
