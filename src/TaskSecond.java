@@ -9,8 +9,8 @@ public class TaskSecond {
 
         Person dmitry = new Person("Dmitry", "Irina", "Fiodor");
         Person sergey = new Person("Sergey", "Natalia", "Wladimir");
-        Person polina = new Person("Polina", "Natasha", "Anatoly");
-        Person alexey = new Person("Alexey", "Elena", "Wadim");
+        Person polina = new Person("Polina", "Inna", "Anatoly");
+        Person alexey = new Person("Alexey", "Elisaweta", "Wadim");
         Person victoria = new Person("Victoria", "Anastasia", "Wladislaw");
         List<Person> people = new ArrayList<>();
         people.add(dmitry);
