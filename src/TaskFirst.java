@@ -23,29 +23,29 @@ public class TaskFirst {
         cars.add(opel);
         cars.add(honda);
         cars.add(ford);
+
         System.out.println("Список машин : " + cars);
 
         int totalMileage = cars.stream()
-                .filter(car -> (car.getName() != null) && car.getMileage() != 0 && car.getManufactureYear()!=0)
-                .filter(car -> car.getManufactureYear() > 1999)
+                .filter(car -> car.getName() != null && car.getManufactureYear() > 1999)
                 .mapToInt(Car::getMileage)
                 .sum();
+
         System.out.println("Общий пробег автомобилей новее 1999 года: " + totalMileage + " км");
 
         Optional<Car> oldCar = cars.stream()
-                .filter(car -> (car.getName() != null) && car.getMileage() != 0 && car.getManufactureYear()!=0)
-                .filter(car -> car.getMileage() > 500_000)
+                .filter(car -> car.getName() != null && car.getMileage() > 500_000)
                 .min(Comparator.comparing(Car::getManufactureYear));
         String nameOfOldCar = String.valueOf(oldCar.orElse(null));
+
         System.out.println("Самая старая машина с пробегом более 500 000 км: " + nameOfOldCar);
 
         Optional<Car> carWithTheHighestMileage = cars.stream()
-                .filter(car -> (car.getName() != null) && car.getMileage() != 0 && car.getManufactureYear()!=0)
-                .filter(car -> (car.getName().startsWith("V") ||
-                        car.getName().startsWith("W"))
-                        && car.getMileage() <= 200_000)
+                .filter(car -> car.getName() != null && car.getMileage() <= 200_000 &&
+                        (car.getName().startsWith("V") || car.getName().startsWith("W")))
                 .max(Comparator.comparing(Car::getMileage));
         String nameOfCarWithTheHighestMileage = String.valueOf(carWithTheHighestMileage.orElse(null));
+
         System.out.println("Машина с маркой на 'V' или 'W' " +
                 "и пробегом не более 200 000 км с наибольшим пробегом: "
                 + nameOfCarWithTheHighestMileage);
