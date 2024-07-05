@@ -12,6 +12,7 @@ public class TaskSecond {
         Person polina = new Person("Polina", "Inna", "Anatoly");
         Person alexey = new Person("Alexey", "Elisaveta", "Wadim");
         Person victoria = new Person("Victoria", "Anastasia", "Wladislaw");
+        Person alex = new Person();
 
         List<Person> people = new ArrayList<>();
         people.add(dmitry);
@@ -19,6 +20,7 @@ public class TaskSecond {
         people.add(polina);
         people.add(alexey);
         people.add(victoria);
+        people.add(alex);
 
         System.out.println("\nСписок персон :");
         people.forEach(System.out::println);
