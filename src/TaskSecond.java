@@ -12,6 +12,7 @@ public class TaskSecond {
         Person polina = new Person("Polina", "Inna", "Anatoly");
         Person alexey = new Person("Alexey", "Elisaveta", "Wadim");
         Person victoria = new Person("Victoria", "Anastasia", "Wladislaw");
+
         List<Person> people = new ArrayList<>();
         people.add(dmitry);
         people.add(sergey);
