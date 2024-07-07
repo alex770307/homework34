@@ -17,9 +17,9 @@ public class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "name='" + name + '\'' +
-                ", mom='" + mom + '\'' +
-                ", dad='" + dad + '\'' +
+                "Name='" + name + '\'' +
+                ", Mom='" + mom + '\'' +
+                ", Dad='" + dad + '\'' +
                 '}';
     }
 
@@ -28,7 +28,9 @@ public class Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return Objects.equals(name, person.name) && Objects.equals(mom, person.mom) && Objects.equals(dad, person.dad);
+        return Objects.equals(name, person.name)
+                && Objects.equals(mom, person.mom)
+                && Objects.equals(dad, person.dad);
     }
 
     @Override

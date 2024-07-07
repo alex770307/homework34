@@ -4,7 +4,6 @@ import java.util.stream.Stream;
 
 public class TaskSecond {
 
-
     public static void main(String[] args) {
 
         Person dmitry = new Person("Dmitry", "Irina", "Fiodor");
